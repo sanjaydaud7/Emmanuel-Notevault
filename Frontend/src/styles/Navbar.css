@@ -1,0 +1,327 @@
+/* Navbar Container */
+
+.navbar {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    height: 70px;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+    position: relative;
+    left: -150px;
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+/* Navigation Links */
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #cbd5e0;
+    font-weight: 750;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    color: #fff;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.nav-icon {
+    stroke-width: 2;
+    margin-right: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/* Auth Buttons */
+
+.auth-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    left: 150px;
+}
+
+.auth-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.auth-btn-outline {
+    color: #181a1d;
+    border-color: #4a5568;
+}
+
+.auth-btn-outline:hover {
+    color: #fff;
+    border-color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+.auth-btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.auth-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+
+/* Mobile Menu Toggle */
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+
+/* Mobile Responsive Styles */
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 1rem;
+        position: relative;
+    }
+    .mobile-menu-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+    .nav-links,
+    .auth-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        flex-direction: column;
+        padding: 80px 2rem 2rem;
+        gap: 1.5rem;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+    .nav-links.mobile-open,
+    .auth-links.mobile-open {
+        right: 0;
+    }
+    .nav-link {
+        width: 100%;
+        padding: 1rem;
+        justify-content: flex-start;
+    }
+    .auth-links {
+        justify-content: center;
+        gap: 1rem;
+    }
+    .auth-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    /* Hamburger Animation */
+    .bar1-active {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    .bar2-active {
+        opacity: 0;
+    }
+    .bar3-active {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+
+
+/* Dark Overlay for Mobile Menu */
+
+@media (max-width: 768px) {
+    .nav-links.mobile-open+.auth-links.mobile-open~.mobile-overlay,
+    .nav-links.mobile-open~.mobile-overlay {
+        display: block;
+    }
+    .mobile-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+}
+
+
+/* Profile Menu Enhancements */
+
+.profile-section {
+    position: relative;
+}
+
+.profile-btn:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+/* Admin Profile Styling */
+
+.profile-menu .admin-section {
+    background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+    border-bottom: 2px solid #f59e0b;
+}
+
+
+/* Menu Item Hover Effects */
+
+.profile-menu button:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.2s ease;
+}
+
+.profile-menu button:hover svg {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+
+/* Admin Badge Animation */
+
+@keyframes adminPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.profile-menu .admin-badge {
+    animation: adminPulse 2s ease-in-out infinite;
+}
+
+
+/* Separator Line for Admin Section */
+
+.admin-separator {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f59e0b, transparent);
+    margin: 8px 0;
+}
+
+
+/* Enhanced Menu Shadows */
+
+.profile-menu {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+
+/* Menu Item Icons */
+
+.profile-menu svg {
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+
+/* Admin Function Icons */
+
+.profile-menu .admin-icon {
+    color: #f59e0b;
+}
+
+
+/* Logout Button Hover */
+
+.profile-menu button[style*="color: #e74c3c"]:hover {
+    background-color: #fef2f2 !important;
+    color: #dc2626 !important;
+}

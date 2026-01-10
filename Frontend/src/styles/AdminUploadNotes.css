@@ -1,0 +1,829 @@
+.admin-upload-container {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.upload-header {
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 2rem;
+}
+
+.upload-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.upload-header p {
+    font-size: 1.1rem;
+    color: #6b7280;
+}
+
+.faculty-upload-notice {
+    background: #f8f4ff;
+    border: 1px solid #e0d4ff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem auto 0;
+    max-width: 600px;
+    text-align: center;
+}
+
+.faculty-upload-notice p {
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+    color: #6b46c1;
+}
+
+.role-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.role-badge.faculty {
+    background: #8b5cf6;
+    color: white;
+}
+
+.upload-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Form Styles */
+
+.upload-form {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.form-section h2 {
+    color: #1f2937;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    color: #374151;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.content-textarea {
+    min-height: 300px;
+    font-family: 'Courier New', monospace;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-hint {
+    display: block;
+    color: #6b7280;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+.error {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+.error-text {
+    color: #ef4444;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+
+/* File Upload */
+
+.file-upload-area {
+    position: relative;
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.file-upload-area:hover {
+    border-color: #667eea;
+    background: #f8faff;
+}
+
+.file-input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-upload-content {
+    color: #6b7280;
+}
+
+.upload-icon {
+    margin: 0 auto 1rem;
+    color: #9ca3af;
+}
+
+.file-upload-content p {
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
+.file-upload-content small {
+    font-size: 0.8rem;
+}
+
+.attachment-list {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.attachment-list h4 {
+    margin: 0 0 0.5rem 0;
+    color: #374151;
+    font-size: 0.9rem;
+}
+
+.attachment-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.attachment-item:last-child {
+    margin-bottom: 0;
+}
+
+.file-icon {
+    color: #667eea;
+}
+
+.file-name {
+    flex: 1;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.file-size {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.remove-file-btn {
+    background: #fee2e2;
+    border: none;
+    border-radius: 4px;
+    padding: 0.25rem;
+    color: #dc2626;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.remove-file-btn:hover {
+    background: #fecaca;
+}
+
+
+/* Submit Message */
+
+.submit-message {
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+.submit-message.success {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.submit-message.error {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+
+/* Form Actions */
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5a67d8;
+}
+
+.btn-secondary {
+    background: #6b7280;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #4b5563;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.btn-outline:hover {
+    background: #667eea;
+    color: white;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* New styles for existing attachments and loading */
+
+.existing-attachments {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #e1f5fe;
+    border: 1px solid #b3e5fc;
+    border-radius: 8px;
+}
+
+.existing-attachments h4 {
+    margin: 0 0 0.5rem 0;
+    color: #0277bd;
+    font-size: 0.9rem;
+}
+
+.attachment-item.existing {
+    background: #ffffff;
+    border: 1px solid #b3e5fc;
+}
+
+.attachment-actions {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+.view-attachment-btn {
+    background: #e3f2fd;
+    border: none;
+    border-radius: 4px;
+    padding: 0.25rem;
+    color: #1976d2;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.view-attachment-btn:hover {
+    background: #bbdefb;
+}
+
+.loading-notice {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: #f0f9ff;
+    border: 1px solid #e0f2fe;
+    border-radius: 6px;
+    color: #0369a1;
+    font-size: 0.9rem;
+}
+
+.loading-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.loading-spinner.small {
+    width: 12px;
+    height: 12px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Preview Section */
+
+.preview-section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+}
+
+.preview-section h2 {
+    color: #1f2937;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.note-preview-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.preview-header {
+    padding: 1rem;
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.subject-badge {
+    background: #667eea;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.preview-content {
+    padding: 1rem;
+}
+
+.preview-title {
+    color: #1f2937;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+.preview-description {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+}
+
+.preview-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.preview-tag {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.preview-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+
+/* Edit Notice Styles */
+
+.edit-notice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #92400e;
+}
+
+.cancel-edit-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cancel-edit-btn:hover {
+    background: #dc2626;
+}
+
+
+/* Notes Management Section */
+
+.notes-management-section {
+    margin-top: 3rem;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.notes-management-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.notes-management-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.notes-management-header p {
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+
+/* Search and Filter */
+
+.notes-filters {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+
+/* Loading States */
+
+.loading-container {
+    text-align: center;
+    padding: 3rem 0;
+    color: #6b7280;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid #f3f4f6;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* No Notes State */
+
+.no-notes {
+    text-align: center;
+    padding: 3rem 0;
+    color: #6b7280;
+}
+
+.no-notes p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Notes Grid */
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+
+/* Note Card */
+
+.note-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.note-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: #d1d5db;
+}
+
+.note-card.editing {
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+    background: #fffbeb;
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.note-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.faculty-view-only {
+    color: #8b5cf6;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background: #f3f4f6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #e5e7eb;
+}
+
+.btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 6px;
+}
+
+.btn-danger {
+    background: #ef4444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-danger:hover:not(:disabled) {
+    background: #dc2626;
+}
+
+.btn-danger:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+.note-content {
+    flex: 1;
+}
+
+.note-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.note-description {
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.note-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.note-tag {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.note-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.meta-item span {
+    font-weight: 500;
+}
+
+.note-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    .upload-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .preview-section {
+        position: static;
+    }
+    .notes-filters {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-upload-container {
+        padding: 1rem 0;
+    }
+    .upload-form,
+    .preview-section,
+    .notes-management-section {
+        padding: 1rem;
+        margin: 0 1rem;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .form-actions {
+        flex-direction: column;
+    }
+    .upload-header h1 {
+        font-size: 2rem;
+    }
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+    .note-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .note-actions {
+        align-self: stretch;
+    }
+    .edit-notice {
+        flex-direction: column;
+        text-align: center;
+    }
+}

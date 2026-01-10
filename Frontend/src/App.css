@@ -1,0 +1,102 @@
+.App {
+    text-align: center;
+    min-height: 100vh;
+}
+
+.home-content {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e6e6e6 100%);
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.navbar-offset {
+    margin-top: 70px;
+}
+
+.App-header {
+    background: linear-gradient(135deg, #282c34 0%, #363d47 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding: 40px 20px;
+}
+
+.App-header h1 {
+    margin-bottom: 20px;
+    color: #61dafb;
+    font-size: 3rem;
+}
+
+.App-header>p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.app-sections {
+    width: 100%;
+    max-width: 800px;
+}
+
+.app-sections section {
+    background-color: rgba(255, 255, 255, 0.05);
+    margin: 20px 0;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid #61dafb;
+    text-align: left;
+}
+
+.app-sections section h2 {
+    color: #61dafb;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.app-sections section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+    .App-header h1 {
+        font-size: 2.2rem;
+    }
+    .App-header>p {
+        font-size: 1rem;
+    }
+    .app-sections section {
+        padding: 20px;
+    }
+    .app-sections section h2 {
+        font-size: 1.3rem;
+    }
+}
